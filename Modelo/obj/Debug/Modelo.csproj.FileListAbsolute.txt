@@ -9,3 +9,7 @@ C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\Modelo\bin\
 C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\Modelo\obj\Debug\Modelo.csproj.CopyComplete
 C:\Users\Usuario\AppData\Local\GitHubDesktop\ConsoleApp1\CAI_-1-20-3-22-Ejercicio1-\ElectroHogar\EletroHogar_SA\Modelo\obj\Debug\Modelo.dll
 C:\Users\Usuario\AppData\Local\GitHubDesktop\ConsoleApp1\CAI_-1-20-3-22-Ejercicio1-\ElectroHogar\EletroHogar_SA\Modelo\obj\Debug\Modelo.pdb
+C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.dll
+C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.pdb
