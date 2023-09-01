@@ -1,0 +1,6 @@
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\Users\carow\OneDrive\Documents\EletroHogar SA CAI\ElectroHogar SA\NEGOCIO\obj\Debug\NEGOCIO.pdb
