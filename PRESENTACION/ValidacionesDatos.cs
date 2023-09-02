@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelo
+namespace PRESENTACION
 {
-    public class Validaciones
+    public class ValidacionesDatos
     {
         public bool ValidarVacio(string valor, string campo)
         {
@@ -48,7 +48,7 @@ namespace Modelo
 
             if (!DateTime.TryParse(fecha, out salida))
             {
-                Console.WriteLine("El dato no es una fecha valida en el campo " + campo +".");
+                Console.WriteLine("El dato no es una fecha valida en el campo " + campo + ".");
             }
             else if (salida > DateTime.Now)
             {
@@ -66,7 +66,7 @@ namespace Modelo
         {
             bool flag = false;
 
-            if (valor != 1 || valor != 2 || valor != 3)
+            if (valor != 1 && valor != 2 && valor != 3)
             {
                 Console.WriteLine("Por favor, ingresar un valor válido del " + campo + ".");
             }

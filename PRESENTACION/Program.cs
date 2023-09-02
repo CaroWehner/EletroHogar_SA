@@ -1,55 +1,63 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Negocio;
-using Modelo;
-using System.Data.SqlTypes;
+using PRESENTACION;
+using NEGOCIO;
+using System.Net;
 
 namespace Presentacion
 {
     public class Program
     {
+        //List<UsuarioModel> usuarios = new List<UsuarioModel>();
+        //UsuarioModel usuario = new UsuarioModel();
+
         static void Main(string[] args)
         {
-            bool flag = false;
-            string inputTareasAdministrador;
-            int tareasAdministrador = 0;
+            UsuarioModel usuario = new UsuarioModel();
+            List<UsuarioModel> usuarios = new List<UsuarioModel>();
 
             Console.WriteLine("Bienvenidos al sistema de Eletro Hogar S.A.");
-            //List<UsuarioModel> usuarios = new List<UsuarioModel>();
 
-            UsuarioModel usuario = new UsuarioModel();
-            usuario.UsuarioAdmin("Carolina", "Wehner", "Uzal 1234", "carowehner2001@gmail.com", new DateTime(2001, 05, 23), "AdminCW", 1, 43245128, "CAI20232");
+            MetodosUsuarios usu = new MetodosUsuarios();
+            usuario = usu.CrearUsuario("Carolina", "Wehner", "Uzal 1234", "1138205055", "carowehner2001@gmail.com", new DateTime(2001, 05, 23), "AdministradoraCW", 1, 43245128, "CAI20232");
+            usuarios.Add(usuario);
             // DATOS DE CADA UNO
 
-            //UsuarioModel usuario1 = new UsuarioModel(); // Crear una instancia de UsuarioModel
-            string inputNombreUsuario = usuario.IngresarUsuario();
 
-            string mensaje = usuario.BuscarPerfil(usuario, usuario.host);
-
-            string inputContraseña = usuario.IngresarContraseña();
-
-            string msj = usuario.BuscarContraseña(usuario, usuario.contraseña);
-
-
-            /*Si es perfil administrador dar las opcion de dar de alta un usuario:
-            do
+            Login login = new Login();
+            string inputNombreUsuario = login.IngresarUsuario();
+            //usuario = usuarios.Find(u => u.usuario == inputNombreUsuario);
+            if (usuarios.Find(u => u.usuario == inputNombreUsuario) == null)
             {
-                Console.Write("Ingrese el número de tarea que se quiere realizar: ");
-                inputTareasAdministrador = Console.ReadLine();
+                Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrado.");
+               
+            }
+            else
+            {
+                MetodosUsuarios perfil = new MetodosUsuarios();
+                string mensaje = perfil.BuscarPerfil(usuario, usuario.host);
+                Console.WriteLine(mensaje);
+            }
+            string inputContraseña = login.IngresarContraseña();
+            string msj = login.BuscarContraseña(usuario, usuario.contraseña);
 
-                Validaciones validador = new Validaciones(); 
-                flag = validador.ValidarNumero(inputTareasAdministrador, ref tareasAdministrador, "Tareas Administrador");
 
-            } while (flag == false);
-            */
+            //AGREGAR INTERFAZ DE MENU, DEL LADOD DE ADMIN DEJO EL ALTA DE UN USUARIO
 
-            UsuarioModel usuarioModel = new UsuarioModel();
-            UsuarioModel usuario2 = usuarioModel.AltaUsuario();
+            AltaUsuario alta = new AltaUsuario();
+            usuario = alta.DarAltaUsuario();
+            usuarios.Add(usuario);
 
-           
+
+
         }
+
+        /*public UsuarioModel BuscarUsuario(string inputUsuario)
+        {
+            return usuarios.Find(u => u.usuario == inputUsuario);
+        }*/
+
+
     }
 }

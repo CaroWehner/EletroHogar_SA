@@ -13,3 +13,5 @@ C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
 C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
 C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.dll
 C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.pdb
+C:\TP CAI\EletroHogar_SA\Modelo\bin\Debug\Modelo.dll
+C:\TP CAI\EletroHogar_SA\Modelo\bin\Debug\Modelo.pdb

@@ -42,18 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Supervisores.cs" />
     <Compile Include="UsuarioModel.cs" />
-    <Compile Include="Validaciones.cs" />
     <Compile Include="Vendedor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NEGOCIO\Negocio.csproj">
-      <Project>{e46f9913-bb70-4557-aa38-f9d486200063}</Project>
-      <Name>Negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
