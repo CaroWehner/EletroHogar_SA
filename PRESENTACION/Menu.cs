@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,36 +29,26 @@ namespace PRESENTACION
                         do
                         {
                             Console.WriteLine("Administrador, seleccione que tarea va a realizar");
-                            Console.WriteLine("1: Alta usuario supervisor");
-                            Console.WriteLine("2: Modificación usuario supervisor");
-                            Console.WriteLine("3: Baja usuario supervisor");
-                            Console.WriteLine("4: Alta usuario vendedor");
-                            Console.WriteLine("5: Modificación usuario vendedor");
-                            Console.WriteLine("6: Baja usuario vendedor");
-                            Console.WriteLine("7: Volver al menú principal");
+                            Console.WriteLine("1: Alta usuario");
+                            Console.WriteLine("2: Modificación usuario");
+                            Console.WriteLine("3: Baja usuario");
+                            Console.WriteLine("4: Volver al menú principal");
                             string opcG = Console.ReadLine().ToUpper();
                             Console.Clear();
                             switch (opcG)
                             {
                                 case "1":
-                                    //Ingresar alta usuario supervisor
+                                    UsuarioModel usuario = new UsuarioModel(); 
+                                    AltaUsuario alta = new AltaUsuario();
+                                    usuario = alta.DarAltaUsuario();
                                     break;
                                 case "2":
-                                    //Ingresar modificación usuario supervisor
+                                    //Ingresar modificación usuario
                                     break;
                                 case "3":
-                                    //Ingresar baja usuario supervisor
+                                    //Ingresar baja usuario
                                     break;
                                 case "4":
-                                    //Ingresar alta usuario vendedor
-                                    break;
-                                case "5":
-                                    //Ingresar modificación usuario vendedor
-                                    break;
-                                case "6":
-                                    //Ingresar baja usuario vendedor
-                                    break;
-                                case "7":
                                     Console.WriteLine("Esta volviendo al menú principal");
                                     CtrlG = false;
                                     break;

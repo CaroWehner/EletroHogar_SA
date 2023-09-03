@@ -31,6 +31,20 @@ namespace Negocio
 
             return false; // La validación falló
         }
-
+        public static void ValidarexpiraciónContraseña (DateTime  FechaContraseña)
+        {
+            DateTime Hoy = DateTime.Today; 
+            DateTime fechaHoy = Convert.ToDateTime(Hoy);
+            DateTime fechaContraseña = Convert.ToDateTime(FechaContraseña);
+            TimeSpan difFechas = fechaHoy - fechaContraseña;
+            int días = difFechas.Days;
+            while (días > 30)
+            {
+                Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
+                string NuevaContra = Console.ReadLine();
+                //Agregar validación para contraseña
+            }
+            
+        }
     }
 }

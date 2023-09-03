@@ -26,7 +26,7 @@ namespace Presentacion
             usuarios.Add(usuario);
             // DATOS DE CADA UNO
 
-            //declaro variable paara perfil
+            //declaro variable para definir el perfil para el menú
             int PerfilMenu = 0;
 
             Login login = new Login();
@@ -44,11 +44,12 @@ namespace Presentacion
                 Console.WriteLine(mensaje);
                 PerfilMenu = usuario.host;
             }
-            string inputContraseña = login.IngresarContraseña();
-            string msj = login.BuscarContraseña(usuario, usuario.contraseña);
+            string inputContraseña = Login.IngresarContraseña();
+            Login.BuscarContraseña(usuario, inputContraseña, usuario.fechacontraseña);
+
 
             //Agrego menu según perfil del usuario
-            if(PerfilMenu==1)
+            if (PerfilMenu==1)
             {
                 Menu.MenuAdm();
             }
@@ -60,15 +61,6 @@ namespace Presentacion
             {
                 Menu.MenuVendedor();
             }
-
-            //AGREGAR INTERFAZ DE MENU, DEL LADO DE ADMIN DEJO EL ALTA DE UN USUARIO
-
-            AltaUsuario alta = new AltaUsuario();
-            usuario = alta.DarAltaUsuario();
-            usuarios.Add(usuario);
-
-            
-
 
         }
 

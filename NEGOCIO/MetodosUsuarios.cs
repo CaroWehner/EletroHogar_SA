@@ -28,6 +28,7 @@ namespace NEGOCIO
             usuario.host = Host;
             usuario.dni = Dni;
             usuario.contraseña = Contraseña;
+            usuario.fechacontraseña = DateTime.Today;
 
             return usuario;
         }

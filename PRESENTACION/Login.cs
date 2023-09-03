@@ -26,7 +26,7 @@ namespace PRESENTACION
 
         }
 
-        public string IngresarContraseña()
+        public static string IngresarContraseña()
         {
             bool flag = false;
             string inputContraseña;
@@ -40,16 +40,43 @@ namespace PRESENTACION
 
             return inputContraseña;
         }
-
-        public string BuscarContraseña(UsuarioModel usuarioEncontrado, string inputContraseña)
+        //Busca que la contraseña sea valida y verifica que no este expirada
+        public static void BuscarContraseña(UsuarioModel usuarioEncontrado, string inputContraseña, DateTime FechaContra)
         {
-            string msj = "";
+            bool Control = true;
+            int contador = 0;
+            do
+            { 
             if (usuarioEncontrado.contraseña != inputContraseña)
             {
-                msj = "Contraseña invalida";
+                Console.WriteLine("Contraseña invalida, ingrese nuevamente su contraseña");
+                    inputContraseña = Login.IngresarContraseña();
+                    contador = contador + 1; 
             }
-
-            return msj;
+            if (usuarioEncontrado.contraseña == inputContraseña)
+             {
+              Control = false;
+             }
+            if (contador == 3)
+             {
+              Environment.Exit(0);
+             }
+                
+            } while (Control);
+            DateTime Hoy = DateTime.Today;
+            TimeSpan difFechas = Hoy - FechaContra;
+            double dif = difFechas.TotalDays;
+            Console.WriteLine("Hola" + dif);
+            if (dif >= 30)
+            {
+                Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
+                string NuevaContra = Console.ReadLine();
+                // pendiente agregar validador de contraseña
+                usuarioEncontrado.contraseña= NuevaContra;
+                usuarioEncontrado.fechacontraseña = Hoy;
+                Console.WriteLine("Se ha cambiado su contraseña");
+            }
         }
     }
 }
+
