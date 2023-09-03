@@ -19,7 +19,6 @@ namespace PRESENTACION
             string inputApellido;
             string inputDireccion;
             string inputTelefono;
-            int telefono = 0;
             string inputEmail;
             string inputFechaNacimiento;
             DateTime fechaNacimiento = DateTime.Now;

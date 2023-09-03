@@ -15,3 +15,9 @@ C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.dll
 C:\TP CAI\EletroHogar_SA\Modelo\obj\Debug\Modelo.pdb
 C:\TP CAI\EletroHogar_SA\Modelo\bin\Debug\Modelo.dll
 C:\TP CAI\EletroHogar_SA\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\bin\Debug\Modelo.dll
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\bin\Debug\Modelo.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.AssemblyReference.cache
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\obj\Debug\Modelo.dll
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\Modelo\obj\Debug\Modelo.pdb

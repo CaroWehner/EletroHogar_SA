@@ -58,7 +58,7 @@ namespace Modelo
         public Int32 dni { get; set; }
         public string contraseña { get; set; }
 
-        public UsuarioModel(Guid Id, string Nombre, string Apellido, string Direccion,string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
+        public UsuarioModel(Guid Id,string Nombre, string Apellido, string Direccion,string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
         {
             id = Id;
             nombre = Nombre;

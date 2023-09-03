@@ -22,7 +22,7 @@ namespace Presentacion
             MetodosUsuarios usu = new MetodosUsuarios();
             usuario = usu.CrearUsuario("Carolina", "Wehner", "Uzal 1234", "1138205055", "carowehner2001@gmail.com", new DateTime(2001, 05, 23), "AdministradoraCW", 1, 43245128, "CAI20232");
             usuarios.Add(usuario);
-            usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 2, 38491201, "CAI20232");
+            usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 1, 38491201, "CAI20232");
             usuarios.Add(usuario);
             // DATOS DE CADA UNO
 
@@ -32,7 +32,7 @@ namespace Presentacion
             //usuario = usuarios.Find(u => u.usuario == inputNombreUsuario);
             if (usuarios.Find(u => u.usuario == inputNombreUsuario) == null)
             {
-                Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrado.");
+                Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrador.");
                
             }
             else
@@ -45,12 +45,13 @@ namespace Presentacion
             string msj = login.BuscarContraseña(usuario, usuario.contraseña);
 
 
-            //AGREGAR INTERFAZ DE MENU, DEL LADOD DE ADMIN DEJO EL ALTA DE UN USUARIO
+            //AGREGAR INTERFAZ DE MENU, DEL LADO DE ADMIN DEJO EL ALTA DE UN USUARIO
 
             AltaUsuario alta = new AltaUsuario();
             usuario = alta.DarAltaUsuario();
             usuarios.Add(usuario);
 
+            
 
 
         }

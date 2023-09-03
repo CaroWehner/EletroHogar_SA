@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Modelo",
     "\\NEGOCIO",
     "\\PRESENTACION"
   ],
-  "SelectedNode": "\\PRESENTACION\\Program.cs",
+  "SelectedNode": "\\PRESENTACION\\ValidacionesDatos.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -24,3 +24,16 @@ C:\TP CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CoreCompileI
 C:\TP CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete
 C:\TP CAI\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\TP CAI\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.dll
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.dll
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.pdb
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
+C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb
