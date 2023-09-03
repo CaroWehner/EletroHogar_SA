@@ -66,7 +66,6 @@ namespace PRESENTACION
             DateTime Hoy = DateTime.Today;
             TimeSpan difFechas = Hoy - FechaContra;
             double dif = difFechas.TotalDays;
-            Console.WriteLine("Hola" + dif);
             if (dif >= 30)
             {
                 Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
