@@ -22,6 +22,8 @@ namespace Presentacion
             MetodosUsuarios usu = new MetodosUsuarios();
             usuario = usu.CrearUsuario("Carolina", "Wehner", "Uzal 1234", "1138205055", "carowehner2001@gmail.com", new DateTime(2001, 05, 23), "AdministradoraCW", 1, 43245128, "CAI20232");
             usuarios.Add(usuario);
+            usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 2, 38491201, "CAI20232");
+            usuarios.Add(usuario);
             // DATOS DE CADA UNO
 
 
