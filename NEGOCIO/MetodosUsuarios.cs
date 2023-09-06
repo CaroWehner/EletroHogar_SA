@@ -54,7 +54,7 @@ namespace NEGOCIO
             return msj;
         }
 
-
+        public string BuscarUsuario (Guid id)
 
     }
 }

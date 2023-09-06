@@ -24,6 +24,7 @@ namespace Presentacion
             usuarios.Add(usuario);
             usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 1, 38491201, "CAI20232");
             usuarios.Add(usuario);
+            usuario = usu.CrearUsuario("Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new Datetime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
             // DATOS DE CADA UNO
 
             //declaro variable para definir el perfil para el menú
@@ -69,6 +70,9 @@ namespace Presentacion
             return usuarios.Find(u => u.usuario == inputUsuario);
         }*/
 
-
+        public UsuarioModel BuscarUsuario (string inputUsuario)
+        {
+            return usuarios.Find(u => u.usuario == inputUsuario);
+        }
     }
 }
