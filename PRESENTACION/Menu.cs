@@ -53,7 +53,7 @@ namespace PRESENTACION
                                     CtrlG = false;
                                     break;
                                 default:
-                                    Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente.");
+                                    Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente. Presione cualquier tecla para volver");
                                     break;
                             }
                         } while (CtrlG);
@@ -156,12 +156,12 @@ namespace PRESENTACION
                         break;
                     case "5":
                         Console.WriteLine("Gracias por utilizar el sistema");
-                        Console.ReadKey();
+                        // Console.ReadKey(); - MM comenté para arreglar bug de no mostrar menu
                         CtrlAdm = false;
                         break;
                     default:
                         Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente.");
-                        Console.ReadKey();
+                        //Console.ReadKey(); - MM comenté para arreglar bug de no mostrar menu
                         Console.Clear();
                         break;
                 }

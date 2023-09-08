@@ -79,9 +79,11 @@ namespace PRESENTACION
                 flag = validador.ValidarFecha(inputFechaNacimiento, ref fechaNacimiento, "Fecha de Nacimiento");
             } while (flag == false);
 
+            Console.WriteLine("ADVERTENCIA");
+            Console.WriteLine("El Nombre de Usuario debe tener entre 8 a 15 caracteres y no debe tener su nombre ni apellido dentro del mismo.");
             do
             {
-                Console.WriteLine("El Nombre de Usuario debe tener entre 8 a 15 caracteres y no debe tener su nombre o apellido dentro del mismo.");
+                // Console.WriteLine("El Nombre de Usuario debe tener entre 8 a 15 caracteres y no debe tener su nombre o apellido dentro del mismo.");
                 Console.Write("Ingresar Nombre de Usuario: ");
                 NombreUsuario = Console.ReadLine();
                 ValidacionesDatos validador = new ValidacionesDatos();
@@ -116,11 +118,12 @@ namespace PRESENTACION
             {
                 Console.Write("Ingresar su Contraseña: ");
                 inputContra = Console.ReadLine();
-
-                //AGREGAR VALIDACIONES DE CONTRASEÑA
+                ValidacionesUsuario.ValidarContraseña(inputContra);
+                //validacion contraseña nuevo usuario
 
             } while (flag == false);
             MetodosUsuarios usu = new MetodosUsuarios();
+            Console.WriteLine("El usuario se dio de alta correctamente ;)");
             return usu.CrearUsuario(inputNombre, inputApellido, inputDireccion, inputTelefono, inputEmail, fechaNacimiento, NombreUsuario, perfil, dni, inputContra);
         }
     }

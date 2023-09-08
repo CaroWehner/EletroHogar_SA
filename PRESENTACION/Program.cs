@@ -24,7 +24,10 @@ namespace Presentacion
             usuarios.Add(usuario);
             usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 1, 38491201, "CAI20232");
             usuarios.Add(usuario);
-            usuario = usu.CrearUsuario("Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new Datetime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
+            usuario = usu.CrearUsuario("Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new DateTime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
+            usuarios.Add(usuario);
+            usuario = usu.CrearUsuario("Manuel", "Monasterio", "Bollini 3451", "1198765432", "manuelm@gmail.com", new DateTime(1998, 04, 14), "AdministradorMM", 1, 41048142, "CAI20232");
+            usuarios.Add(usuario);
             // DATOS DE CADA UNO
 
             //declaro variable para definir el perfil para el menú
@@ -33,18 +36,21 @@ namespace Presentacion
             Login login = new Login();
             string inputNombreUsuario = login.IngresarUsuario();
             //usuario = usuarios.Find(u => u.usuario == inputNombreUsuario);
-            if (usuarios.Find(u => u.usuario == inputNombreUsuario) == null)
+            if (usuarios.Find(u => u.usuario == inputNombreUsuario) != null)
             {
-                Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrador.");
-               
+                UsuarioModel usuario1 = usuarios.Find(p => p.usuario == inputNombreUsuario);
+                MetodosUsuarios perfil = new MetodosUsuarios();
+                string mensaje = perfil.BuscarPerfil(usuario1, usuario1.host);
+                Console.WriteLine(mensaje);
+                PerfilMenu = usuario1.host;
+
             }
             else
             {
-                MetodosUsuarios perfil = new MetodosUsuarios();
-                string mensaje = perfil.BuscarPerfil(usuario, usuario.host);
-                Console.WriteLine(mensaje);
-                PerfilMenu = usuario.host;
+                Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrador.");
+                inputNombreUsuario = login.IngresarUsuario();
             }
+
             string inputContraseña = Login.IngresarContraseña();
             Login.BuscarContraseña(usuario, inputContraseña, usuario.fechacontraseña);
 
@@ -54,11 +60,11 @@ namespace Presentacion
             {
                 Menu.MenuAdm();
             }
-            if (PerfilMenu == 2)
+            else if (PerfilMenu == 2) //MM - se modifico else if
             {
                 Menu.MenuSupervisor();
             }
-            else
+            else if (PerfilMenu == 3) //MM - se modifico para que no entre por error termine el programa
             {
                 Menu.MenuVendedor();
             }
@@ -70,9 +76,5 @@ namespace Presentacion
             return usuarios.Find(u => u.usuario == inputUsuario);
         }*/
 
-        public UsuarioModel BuscarUsuario (string inputUsuario)
-        {
-            return usuarios.Find(u => u.usuario == inputUsuario);
-        }
     }
 }

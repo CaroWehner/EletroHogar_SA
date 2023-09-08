@@ -40,7 +40,7 @@ namespace PRESENTACION
 
             return inputContraseña;
         }
-        //Busca que la contraseña sea valida y verifica que no este expirada
+        //Busca que la contraseña sea valida y verifica que no este expirada - MM 
         public static void BuscarContraseña(UsuarioModel usuarioEncontrado, string inputContraseña, DateTime FechaContra)
         {
             bool Control = true;
@@ -66,11 +66,28 @@ namespace PRESENTACION
             DateTime Hoy = DateTime.Today;
             TimeSpan difFechas = Hoy - FechaContra;
             double dif = difFechas.TotalDays;
+            bool flag = false;
             if (dif >= 30)
             {
-                Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
+                Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña: ");
                 string NuevaContra = Console.ReadLine();
-                // pendiente agregar validador de contraseña
+                while (flag == false) 
+                { 
+                    if (usuarioEncontrado.contraseña == NuevaContra)
+                    {
+                        Console.WriteLine("La nueva contraseña no puede ser igual a la anterior" +
+                                         System.Environment.NewLine + "Por favor vuelva a introducir una contraseña válida: ");
+
+                        NuevaContra = Console.ReadLine();
+
+                    }
+                    else
+                    {
+                       flag = true;
+                    }
+                    
+                }
+                ValidacionesUsuario.ValidarContraseña(NuevaContra);
                 usuarioEncontrado.contraseña= NuevaContra;
                 usuarioEncontrado.fechacontraseña = Hoy;
                 Console.WriteLine("Se ha cambiado su contraseña");

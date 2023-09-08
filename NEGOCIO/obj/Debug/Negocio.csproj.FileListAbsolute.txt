@@ -22,3 +22,12 @@ C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.c
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.dll
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\bin\Debug\NEGOCIO.dll
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\bin\Debug\Modelo.dll
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\bin\Debug\Modelo.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CopyComplete
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.dll
+D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.pdb
