@@ -50,7 +50,7 @@ namespace PRESENTACION
             {
                 Console.WriteLine("El dato no es una fecha valida en el campo: " + campo + ".");
             }
-            else if (salida <= new DateTime(1910,01,01))
+            else if (salida <= new DateTime(1910,01,01) || salida > DateTime.Today)
             {
                 Console.WriteLine("La fecha es inválida en el campo: " + campo + ".");
             }
