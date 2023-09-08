@@ -44,6 +44,9 @@ namespace PRESENTACION
                                     break;
                                 case "2":
                                     //Ingresar modificación usuario
+                                    UsuarioModel usuario1 = new UsuarioModel();
+                                    ModificarUsuario mod = new ModificarUsuario();
+                                    usuario = mod.ModUsuario(usuario1);
                                     break;
                                 case "3":
                                     //Ingresar baja usuario
