@@ -51,11 +51,5 @@ namespace NEGOCIO
 
             return msj;
         }
-
-       /* public string BuscarUsuario(Guid id)
-        {
-       PARA 2do SPRINT 29/09
-        }
-        */
     }
 }

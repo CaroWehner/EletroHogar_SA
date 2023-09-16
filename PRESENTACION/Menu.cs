@@ -9,6 +9,7 @@ namespace PRESENTACION
 {
     public class Menu
     {
+        public static List<UsuarioModel> usuarios = new List<UsuarioModel>();
         public static void MenuAdm()
         {
             bool CtrlAdm = true;
@@ -38,18 +39,57 @@ namespace PRESENTACION
                             switch (opcG)
                             {
                                 case "1":
-                                    UsuarioModel usuario = new UsuarioModel(); 
+                                    string inputPerfil;
+                                    int perfil = 0;
+                                    bool flag;
                                     AltaUsuario alta = new AltaUsuario();
-                                    usuario = alta.DarAltaUsuario();
+                                    do
+                                    {
+                                        Console.WriteLine("1- Perfil Administrador");
+                                        Console.WriteLine("2- Perfil Supervisor");
+                                        Console.WriteLine("3- Perfil Vendedor");
+                                        Console.Write("Ingrese el perfil correspondiente para el nuevo usuario:  ");
+                                        inputPerfil = Console.ReadLine();
+                                        ValidacionesDatos validador = new ValidacionesDatos();
+                                        flag = validador.ValidarNumero(inputPerfil, ref perfil, "Perfil");
+                                        flag = validador.ValidarTipoNum(ref perfil, "Perfil");
+                                    } while (flag == false);
+
+                                    if (perfil == 1)
+                                    {
+                                        UsuarioModel usuario = new Administrador();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else if (perfil == 2)
+                                    {
+                                        UsuarioModel usuario = new Supervisores();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else if (perfil == 3)
+                                    {
+                                        UsuarioModel usuario = new Vendedor();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("No se pudo dar de alta");
+                                    }
                                     break;
                                 case "2":
                                     //Ingresar modificación usuario
                                     UsuarioModel usuario1 = new UsuarioModel();
                                     ModificarUsuario mod = new ModificarUsuario();
-                                    usuario = mod.ModUsuario(usuario1);
+                                    usuario1 = mod.ModUsuario(usuario1);
                                     break;
                                 case "3":
                                     //Ingresar baja usuario
+                                    BajaUsuario baja = new BajaUsuario();
+                                    UsuarioModel usuario3 = new UsuarioModel();
+                                    usuario3 = baja.DarBajaUsuario();
+                                    //pasar a INACTIVO
                                     break;
                                 case "4":
                                     Console.WriteLine("Esta volviendo al menú principal");
@@ -297,6 +337,11 @@ namespace PRESENTACION
                 }
                 Console.Clear();
             } while (CtrlVend);
+        }
+        public UsuarioModel BuscarUsuario(string idUsuario)
+        {
+            idUsuario = Guid.NewGuid().ToString();
+            return Menu.usuarios.Find(u => u.usuario == idUsuario);
         }
     }
 }
