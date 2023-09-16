@@ -61,5 +61,9 @@ namespace Modelo
         {
            
         }    
+        public Supervisores()
+        {
+
+        }
     } 
 }
