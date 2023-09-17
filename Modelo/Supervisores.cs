@@ -43,7 +43,7 @@ namespace Modelo
         //public int Dni { get => _dni; set => _dni = value; }
         //public string Contraseña { get => _contraseña; set => _contraseña = value; }
 
-        public Guid id { get; set; }
+        public string id { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string direccion { get; set; }

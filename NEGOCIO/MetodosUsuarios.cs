@@ -15,7 +15,7 @@ namespace NEGOCIO
         public UsuarioModel CrearUsuario(string Nombre, string Apellido, string Direccion, string telefono, string Email, DateTime FechaNacimiento, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
         {
             UsuarioModel usuario = new UsuarioModel();
-            usuario.id = Guid.NewGuid();
+            usuario.id = Guid.NewGuid().ToString();
             usuario.nombre = Nombre;
             usuario.apellido = Apellido;
             usuario.direccion = Direccion;
