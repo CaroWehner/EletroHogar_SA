@@ -29,6 +29,7 @@ namespace NEGOCIO
             usuario.dni = Dni;
             usuario.contraseña = Contraseña;
             usuario.fechacontraseña = DateTime.Today;
+            usuario.estado = "INACTIVO";
 
             return usuario;
         }

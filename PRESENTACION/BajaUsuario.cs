@@ -15,7 +15,7 @@ namespace PRESENTACION
             bool flag;
             do
             {
-                Console.Write("Ingresar el id del usuario a borrar: ");
+                Console.Write("Ingresar el id del usuario a dar de baja: ");
                 idUsuario = Console.ReadLine();
                 ValidacionesDatos validador = new ValidacionesDatos();
                 flag = validador.ValidarVacio(idUsuario, "ID Usuario");

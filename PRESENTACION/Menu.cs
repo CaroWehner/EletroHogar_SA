@@ -89,6 +89,7 @@ namespace PRESENTACION
                                     BajaUsuario baja = new BajaUsuario();
                                     UsuarioModel usuario3 = new UsuarioModel();
                                     usuario3 = baja.DarBajaUsuario();
+                                    usuario3.estado = "INACTIVO";
                                     //pasar a INACTIVO
                                     break;
                                 case "4":
