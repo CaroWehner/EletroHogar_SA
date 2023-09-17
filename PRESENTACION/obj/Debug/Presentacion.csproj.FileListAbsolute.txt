@@ -37,3 +37,15 @@ C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Pres
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
 C:\Users\Evee\source\repos\CaroWehner\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.dll
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.dll
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.pdb
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
+D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb

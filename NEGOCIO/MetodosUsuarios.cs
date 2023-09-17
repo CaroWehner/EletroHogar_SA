@@ -32,8 +32,6 @@ namespace NEGOCIO
 
             return usuario;
         }
-        
-
 
         public string BuscarPerfil(UsuarioModel usuarioEncontrado, int inputhost)
         {
@@ -53,8 +51,5 @@ namespace NEGOCIO
 
             return msj;
         }
-
-        public string BuscarUsuario (Guid id)
-
     }
 }
