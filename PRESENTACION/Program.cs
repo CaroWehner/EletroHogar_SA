@@ -72,7 +72,7 @@ namespace Presentacion
         }
 
         public void ListarUsuarios()
-        { 
+        {
             Console.WriteLine("ingrese el id del usuario: ");
             string id = (Console.ReadLine());
             BuscarUsuario(id);
@@ -107,9 +107,5 @@ namespace Presentacion
 
         }
 
-        private string BuscarUsuario(Guid idCorrecto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

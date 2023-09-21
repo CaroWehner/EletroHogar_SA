@@ -50,7 +50,7 @@ namespace PRESENTACION
             {
                 Console.WriteLine("El dato no es una fecha valida en el campo: " + campo + ".");
             }
-            else if (salida <= new DateTime(1910,01,01) || salida > DateTime.Today)
+            else if (salida <= new DateTime(1910, 01, 01) || salida > DateTime.Today)
             {
                 Console.WriteLine("La fecha es inválida en el campo: " + campo + ".");
             }
@@ -75,6 +75,23 @@ namespace PRESENTACION
                 flag = true;
             }
             return flag;
+        }
+
+        public bool ValidarGuid (string input, ref Guid id)
+        {
+            bool flag = true;
+
+            if(Guid.TryParse(input, out Guid idvalidado))
+            {
+                Console.WriteLine("El ID contiene un formato válido.");
+            }
+            else
+            {
+                flag = false;
+                Console.WriteLine("El ID no contiene un formato válido");
+            }
+
+            return flag; 
         }
     }
 }

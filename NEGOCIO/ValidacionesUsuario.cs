@@ -101,7 +101,7 @@ namespace Negocio
                 //sin tener que pifear cada una para conocer todas las condiciones necesarias
             }    
             
-            
+            public bool
 
 
 
