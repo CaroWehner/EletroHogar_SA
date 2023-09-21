@@ -79,6 +79,14 @@ namespace Modelo
         {
         }
 
+        public List<UsuarioModel> FindAll(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
 
+        public bool Find(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
     } 
 }

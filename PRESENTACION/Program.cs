@@ -10,8 +10,8 @@ namespace Presentacion
     public class Program
     {
         //List<UsuarioModel> usuarios = new List<UsuarioModel>();
-        //UsuarioModel usuario = new UsuarioModel();
-
+        UsuarioModel usuario = new UsuarioModel();
+        List<UsuarioModel> usuarios = new List<UsuarioModel>();
         static void Main(string[] args)
         {
             UsuarioModel usuario = new UsuarioModel();
@@ -24,7 +24,7 @@ namespace Presentacion
             usuarios.Add(usuario);
             usuario = usu.CrearUsuario("Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 1, 38491201, "CAI20232");
             usuarios.Add(usuario);
-            usuario = usu.CrearUsuario("Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new Datetime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
+            usuario = usu.CrearUsuario("Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new DateTime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
             // DATOS DE CADA UNO
 
             //declaro variable para definir el perfil para el menú
@@ -36,7 +36,7 @@ namespace Presentacion
             if (usuarios.Find(u => u.usuario == inputNombreUsuario) == null)
             {
                 Console.WriteLine("Usuario no existe, se debera dar de alta con un Administrador.");
-               
+
             }
             else
             {
@@ -50,7 +50,7 @@ namespace Presentacion
 
 
             //Agrego menu según perfil del usuario
-            if (PerfilMenu==1)
+            if (PerfilMenu == 1)
             {
                 Menu.MenuAdm();
             }
@@ -65,14 +65,51 @@ namespace Presentacion
 
         }
 
-        /*public UsuarioModel BuscarUsuario(string inputUsuario)
-        {
-            return usuarios.Find(u => u.usuario == inputUsuario);
-        }*/
 
-        public UsuarioModel BuscarUsuario (string inputUsuario)
+        public UsuarioModel BuscarUsuario(string inputUsuario)
         {
             return usuarios.Find(u => u.usuario == inputUsuario);
+        }
+
+        public void ListarUsuarios()
+        { 
+            Console.WriteLine("ingrese el id del usuario: ");
+            string id = (Console.ReadLine());
+            BuscarUsuario(id);
+            //ValidarId(id);
+            /*string ValidarId(string valor)
+            {
+                Guid num;
+
+                if (Guid.TryParse(valor, out num))
+                {
+                    Console.WriteLine("Pudo convertirse el número de ID en el tipo de dato solicitado");
+                }
+                else
+                {
+                    Console.WriteLine("No pudo convertirse el número de ID en el tipo de dato solicitado");
+                }
+                return num;
+            }*/
+
+            if (usuarios.Count > 0)
+            {
+                foreach (UsuarioModel UM in usuarios)
+                {
+                    Console.WriteLine("El usuario con Id " + id + " es: " + BuscarUsuario(id));
+                }
+            }
+            else
+            {
+                Console.WriteLine("No existen usuarios con el id seleccionado");
+            }
+
+
+        }
+
+        private string BuscarUsuario(Guid idCorrecto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

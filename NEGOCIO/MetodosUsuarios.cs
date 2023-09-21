@@ -11,7 +11,7 @@ namespace NEGOCIO
 {
     public class MetodosUsuarios
     {
-
+        List<UsuarioModel> usuarios = new List<UsuarioModel>();
         public UsuarioModel CrearUsuario(string Nombre, string Apellido, string Direccion, string telefono, string Email, DateTime FechaNacimiento, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
         {
             UsuarioModel usuario = new UsuarioModel();
@@ -54,7 +54,7 @@ namespace NEGOCIO
             return msj;
         }
 
-        public string BuscarUsuario (Guid id)
+        
 
     }
 }
