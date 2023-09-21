@@ -10,6 +10,19 @@ namespace PRESENTACION
 {
     public class Login
     {
+        public void IntentosLogin(UsuarioModel usuario)
+        {
+            int fila = 0;
+
+            do
+            {
+                IngresarUsuario();
+                IngresarContraseña();
+
+            } while (fila < 4);
+
+            //buscar usuario y pasarlo a INACTIVO 
+        }
         public string IngresarUsuario()
         {
             bool flag = false;
