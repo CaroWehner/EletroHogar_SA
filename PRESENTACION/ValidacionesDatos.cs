@@ -48,11 +48,11 @@ namespace PRESENTACION
 
             if (!DateTime.TryParse(fecha, out salida))
             {
-                Console.WriteLine("El dato no es una fecha valida en el campo " + campo + ".");
+                Console.WriteLine("El dato no es una fecha valida en el campo: " + campo + ".");
             }
-            else if (salida > DateTime.Now)
+            else if (salida <= new DateTime(1910,01,01) || salida > DateTime.Today)
             {
-                Console.WriteLine("La fecha no debe ser mayor a hoy en el campo " + campo + ".");
+                Console.WriteLine("La fecha es inválida en el campo: " + campo + ".");
             }
             else
             {

@@ -9,6 +9,7 @@ namespace PRESENTACION
 {
     public class Menu
     {
+        public static List<UsuarioModel> usuarios = new List<UsuarioModel>();
         public static void MenuAdm()
         {
             bool CtrlAdm = true;
@@ -38,26 +39,74 @@ namespace PRESENTACION
                             switch (opcG)
                             {
                                 case "1":
-                                    UsuarioModel usuario = new UsuarioModel(); 
+                                    string inputPerfil;
+                                    int perfil = 0;
+                                    bool flag;
                                     AltaUsuario alta = new AltaUsuario();
-                                    usuario = alta.DarAltaUsuario();
+                                    do
+                                    {
+                                        Console.WriteLine("1- Perfil Administrador");
+                                        Console.WriteLine("2- Perfil Supervisor");
+                                        Console.WriteLine("3- Perfil Vendedor");
+                                        Console.Write("Ingrese el perfil correspondiente para el nuevo usuario:  ");
+                                        inputPerfil = Console.ReadLine();
+                                        ValidacionesDatos validador = new ValidacionesDatos();
+                                        flag = validador.ValidarNumero(inputPerfil, ref perfil, "Perfil");
+                                        flag = validador.ValidarTipoNum(ref perfil, "Perfil");
+
+                                    } while (flag == false);
+
+                                    if (perfil == 1)
+                                    {
+                                        UsuarioModel usuario = new Administrador();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else if (perfil == 2)
+                                    {
+                                        UsuarioModel usuario = new Supervisores();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else if (perfil == 3)
+                                    {
+                                        UsuarioModel usuario = new Vendedor();
+                                        usuario = alta.DarAltaUsuario(perfil);
+                                        usuarios.Add(usuario);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("No se pudo dar de alta");
+                                    }
                                     break;
+
                                 case "2":
-                                    //Ingresar modificación usuario
+                                    //Ingresar modificación usuario                              
+                                    ModificarUsuario mod = new ModificarUsuario();
+                                    UsuarioModel usuario1 = new UsuarioModel();
+                                    usuario1 = mod.ModUsuario();
                                     break;
+
                                 case "3":
                                     //Ingresar baja usuario
+                                    BajaUsuario baja = new BajaUsuario();
+                                    UsuarioModel usuario3 = new UsuarioModel();
+                                    usuario3 = baja.DarBajaUsuario();
+                                    usuario3.estado = "INACTIVO";
+                                    //pasar a INACTIVO
                                     break;
+
                                 case "4":
                                     Console.WriteLine("Esta volviendo al menú principal");
                                     CtrlG = false;
                                     break;
                                 default:
-                                    Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente.");
+                                    Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente. Presione cualquier tecla para volver");
                                     break;
                             }
                         } while (CtrlG);
                         break;
+
                     case "2":
                         bool CtrlProv = true;
                         do
@@ -74,12 +123,15 @@ namespace PRESENTACION
                                 case "1":
                                     //Ingresar alta proveedor
                                     break;
+
                                 case "2":
                                     //Ingresar modificación proveedor
                                     break;
+
                                 case "3":
                                     //Ingresar baja proveedor
                                     break;
+
                                 case "4":
                                     Console.WriteLine("Esta volviendo al menú principal");
                                     CtrlProv = false;
@@ -90,6 +142,7 @@ namespace PRESENTACION
                             }
                         } while (CtrlProv);
                         break;
+
                     case "3":
                         bool CtrlProd = true;
                         do
@@ -106,9 +159,11 @@ namespace PRESENTACION
                                 case "1":
                                     //Ingresar alta producto
                                     break;
+
                                 case "2":
                                     //Ingresar modificación producto
                                     break;
+
                                 case "3":
                                     //Ingresar baja producto
                                     break;
@@ -122,6 +177,7 @@ namespace PRESENTACION
                             }
                         } while (CtrlProd);
                         break;
+
                     case "4":
                         bool CtrlRep = true;
                         do
@@ -138,12 +194,15 @@ namespace PRESENTACION
                                 case "1":
                                     //llamar procedimiento reporte de stock critico
                                     break;
+
                                 case "2":
                                     //llamar procedimiento reporte de ventas
                                     break;
+
                                 case "3":
                                     //llamar procedimiento reporte de productos mas vendidos
                                     break;
+
                                 case "4":
                                     Console.WriteLine("Esta volviendo al menú principal");
                                     CtrlProd = false;
@@ -154,14 +213,15 @@ namespace PRESENTACION
                             }
                         } while (CtrlRep);
                         break;
+
                     case "5":
                         Console.WriteLine("Gracias por utilizar el sistema");
-                        Console.ReadKey();
+                        // Console.ReadKey(); - MM comenté para arreglar bug de no mostrar menu
                         CtrlAdm = false;
                         break;
                     default:
                         Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente.");
-                        Console.ReadKey();
+                        //Console.ReadKey(); - MM comenté para arreglar bug de no mostrar menu
                         Console.Clear();
                         break;
                 }
@@ -214,9 +274,11 @@ namespace PRESENTACION
                             }
                         } while (CtrlProd);
                         break;
+
                     case "2":
                         //Llamar metodo devolucion
                         break;
+
                     case "3":
                         bool CtrlRep = true;
                         do
@@ -249,11 +311,13 @@ namespace PRESENTACION
                             }
                         } while (CtrlRep);
                         break;
+
                     case "4":
                         Console.WriteLine("Gracias por utilizar el sistema");
                         Console.ReadKey();
                         CtrlSup = false;
                         break;
+
                     default:
                         Console.WriteLine("Se ingreso una opcion invalida, intente nuevamente.");
                         Console.ReadKey();
@@ -295,5 +359,13 @@ namespace PRESENTACION
                 Console.Clear();
             } while (CtrlVend);
         }
+
+        public UsuarioModel BuscarUsuario(string idUsuario)
+        {
+            idUsuario = Guid.NewGuid().ToString();
+            return Menu.usuarios.Find(u => u.usuario == idUsuario);
+        }
+
+
     }
 }
