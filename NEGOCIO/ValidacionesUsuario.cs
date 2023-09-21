@@ -34,26 +34,26 @@ namespace Negocio
 
             return false; // La validación falló
         }
-       /* public static void ValidarexpiraciónContraseña (DateTime  FechaContraseña)
-        {
-            DateTime Hoy = DateTime.Today; 
-            DateTime fechaHoy = Convert.ToDateTime(Hoy);
-            DateTime fechaContraseña = Convert.ToDateTime(FechaContraseña);
-            TimeSpan difFechas = fechaHoy - fechaContraseña;
-            int días = difFechas.Days;
-            while (días > 30)
-            {
-                Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
-                string NuevaContra = Console.ReadLine();
-                ValidarContraseña(NuevaContra);
-                
-            }
+        /* public static void ValidarexpiraciónContraseña (DateTime  FechaContraseña)
+         {
+             DateTime Hoy = DateTime.Today; 
+             DateTime fechaHoy = Convert.ToDateTime(Hoy);
+             DateTime fechaContraseña = Convert.ToDateTime(FechaContraseña);
+             TimeSpan difFechas = fechaHoy - fechaContraseña;
+             int días = difFechas.Days;
+             while (días > 30)
+             {
+                 Console.WriteLine("Su contraseña a expirado, por favor ingrese una nueva contraseña");
+                 string NuevaContra = Console.ReadLine();
+                 ValidarContraseña(NuevaContra);
 
-        }
-        */
+             }
+
+         }
+         */
         public static void ValidarContraseña(string contraseña)
         {
-            bool flag  = false;
+            bool flag = false;
             bool contieneMayus = false;
             bool contieneNumero = false;
 
@@ -63,13 +63,13 @@ namespace Negocio
                 {
                     if (char.IsUpper(caracter))
                     {
-                     contieneMayus = true;
-                     //si tiene una Mayuscula entonces OK esta y pasa a la siguiente
+                        contieneMayus = true;
+                        //si tiene una Mayuscula entonces OK esta y pasa a la siguiente
                     }
                     else if (char.IsDigit(caracter))
                     {
-                     contieneNumero = true;
-                     //si tiene un Número entonces OK
+                        contieneNumero = true;
+                        //si tiene un Número entonces OK
                     }
 
                 }
@@ -99,13 +99,12 @@ namespace Negocio
                 }
                 //dejé ambos mensajes en las validaciones porque me parece mejor para la experiencia del usuario que sepa desde el inicio todas las condiciones para cumplir con la contraseña
                 //sin tener que pifear cada una para conocer todas las condiciones necesarias
-            }    
+            }
+        }   
             
-            public bool
 
 
-
-        }
+        
      
     }
 }

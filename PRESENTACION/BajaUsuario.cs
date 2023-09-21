@@ -24,6 +24,7 @@ namespace PRESENTACION
 
             Menu menu = new Menu();
             UsuarioModel usuario = menu.BuscarUsuario(idUsuario);
+            usuario.estado = "INACTIVO";
             return usuario;
         }
     }

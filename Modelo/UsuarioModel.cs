@@ -58,7 +58,9 @@ namespace Modelo
         public Int32 dni { get; set; }
         public string contraseña { get; set; }
         public DateTime fechacontraseña { get; set; }
-        public UsuarioModel(Guid Id, string Nombre, string Apellido, string Direccion, string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
+        
+        public string estado { get; set; }
+        public UsuarioModel(Guid Id, string Nombre, string Apellido, string Direccion, string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña, string Estado)
         {
             id = Id;
             nombre = Nombre;
@@ -74,6 +76,7 @@ namespace Modelo
             dni = Dni;
             contraseña = Contraseña;
             fechacontraseña = DateTime.Today;
+            estado = Estado; 
         }
     public UsuarioModel()
         {

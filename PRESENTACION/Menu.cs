@@ -1,4 +1,5 @@
 ﻿using Modelo;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -362,7 +363,16 @@ namespace PRESENTACION
 
         public UsuarioModel BuscarUsuario(string idUsuario)
         {
-            idUsuario = Guid.NewGuid().ToString();
+            bool flag = false;
+
+            flag = ValidacionesDatos.ValidarVacio(idUsuario);
+            flag = ValidacionesDatos.ValidarID(idUsuario);
+             
+            if (flag == true)
+            {
+                idUsuario = Guid.NewGuid().ToString();
+            }
+            
             return Menu.usuarios.Find(u => u.usuario == idUsuario);
         }
 

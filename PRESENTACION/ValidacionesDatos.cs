@@ -77,11 +77,19 @@ namespace PRESENTACION
             return flag;
         }
 
-        public bool ValidarGuid (string input, ref Guid id)
+        public bool ValidarID (string input)
         {
             bool flag = true;
-
-            if(Guid.TryParse(input, out Guid idvalidado))
+            if(!(input.Length == 32))
+            {
+                //los tipos de dato GUID tienen 32 caracteres
+                Console.WriteLine("El ID debe tener 32 caracteres.");
+            }
+            else if (IDsolonum(input) == false)
+            {
+                Console.WriteLine("El ID contiene dígitos especiales y solo debe contener números");
+            }
+            else if(Guid.TryParse(input, out Guid idvalidado))
             {
                 Console.WriteLine("El ID contiene un formato válido.");
             }
@@ -91,7 +99,25 @@ namespace PRESENTACION
                 Console.WriteLine("El ID no contiene un formato válido");
             }
 
-            return flag; 
+            return flag;
+        }
+
+        //verifica que el ID solo tenga números y no guiones (para luego verificar que tenga 32 números en el método de arriba)
+        public bool IDsolonum(string input)
+        {
+            foreach (char c in input)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        internal static bool ValidarVacio(string idUsuario)
+        {
+            throw new NotImplementedException();
         }
     }
 }

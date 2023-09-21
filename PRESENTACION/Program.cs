@@ -73,38 +73,29 @@ namespace Presentacion
 
         public void ListarUsuarios()
         {
+            bool flag = false; 
+
             Console.WriteLine("ingrese el id del usuario: ");
             string id = (Console.ReadLine());
+            flag = ValidacionesDatos.ValidarVacio(id);
+            //flag = ValidacionesDatos.ValidarID(id);
             BuscarUsuario(id);
-            //ValidarId(id);
-            /*string ValidarId(string valor)
-            {
-                Guid num;
 
-                if (Guid.TryParse(valor, out num))
+            if (flag == true)
+            {
+                if (usuarios.Count > 0)
                 {
-                    Console.WriteLine("Pudo convertirse el número de ID en el tipo de dato solicitado");
+                    foreach (UsuarioModel UM in usuarios)
+                    {
+                        Console.WriteLine("El usuario con Id " + id + " es: " + BuscarUsuario(id));
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("No pudo convertirse el número de ID en el tipo de dato solicitado");
+                    Console.WriteLine("No existen usuarios con el id seleccionado");
                 }
-                return num;
-            }*/
 
-            if (usuarios.Count > 0)
-            {
-                foreach (UsuarioModel UM in usuarios)
-                {
-                    Console.WriteLine("El usuario con Id " + id + " es: " + BuscarUsuario(id));
-                }
             }
-            else
-            {
-                Console.WriteLine("No existen usuarios con el id seleccionado");
-            }
-
-
         }
 
     }
