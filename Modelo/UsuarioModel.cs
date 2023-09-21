@@ -44,7 +44,7 @@ namespace Modelo
         //public int Dni { get => _dni; set => _dni = value; }
         //public string Contraseña { get => _contraseña; set => _contraseña = value; }
 
-        public string id { get; set; }
+        public Guid id { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
         public string direccion { get; set; }
@@ -59,7 +59,7 @@ namespace Modelo
         public string contraseña { get; set; }
         public DateTime fechacontraseña { get; set; }
         public string estado { get; set; }
-        public UsuarioModel(string Id, string Nombre, string Apellido, string Direccion, string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña, string Estado)
+        public UsuarioModel(Guid Id, string Nombre, string Apellido, string Direccion, string Telefono, string Email, DateTime FechaAlta, DateTime FechaNacimiento, DateTime FechaBaja, string Usuario, Int32 Host, Int32 Dni, string Contraseña, string Estado)
         {
             id = Id;
             nombre = Nombre;
@@ -75,7 +75,7 @@ namespace Modelo
             dni = Dni;
             contraseña = Contraseña;
             fechacontraseña = DateTime.Today;
-            estado = Estado
+            estado = Estado;
         }
     public UsuarioModel()
         {
@@ -83,7 +83,7 @@ namespace Modelo
     public void CambioEstado ()
         {
             estado = "INACTIVO";
-            Console.WriteLine("El usuario" + usuario "se encuentra inactivo, contacte a un administrador para cambiar el estado");
+            Console.WriteLine("El usuario" + usuario + "se encuentra inactivo, contacte a un administrador para cambiar el estado");
         }
     } 
 }

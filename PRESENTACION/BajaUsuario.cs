@@ -19,6 +19,7 @@ namespace PRESENTACION
                 idUsuario = Console.ReadLine();
                 ValidacionesDatos validador = new ValidacionesDatos();
                 flag = validador.ValidarVacio(idUsuario, "ID Usuario");
+
             } while (flag == false);
 
             Menu menu = new Menu();

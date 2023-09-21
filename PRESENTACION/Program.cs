@@ -25,6 +25,8 @@ namespace Presentacion
             Menu.usuarios.Add(usuario);
             usuario = usu.CrearUsuario("Manuel", "Monasterio", "Bollini 3451", "1198765432", "manuelm@gmail.com", new DateTime(1998, 04, 14), "AdministradorMM", 1, 41048142, "CAI20232");
             Menu.usuarios.Add(usuario);
+            usuario = usu.CrearUsuario("Quimey", "Lopez", "valle grande 859 ", "116128236", "quimeyjoaquin@gmail.com", new DateTime(1999, 09, 22), "AdministradorQL", 1, 4219134, "CAI20232");
+            Menu.usuarios.Add(usuario);
 
             //declaro variable para definir el perfil para el menú
             int PerfilMenu = 0;

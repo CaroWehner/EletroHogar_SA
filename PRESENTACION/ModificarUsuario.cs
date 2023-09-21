@@ -4,6 +4,7 @@ using NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,7 +13,25 @@ namespace PRESENTACION
     public class ModificarUsuario
     {
 
-        public UsuarioModel ModUsuario(UsuarioModel usuario)
+        public UsuarioModel ModiUsuario()
+        {
+            string idUsuario;
+            bool flag;
+            do
+            {
+                Console.Write("Ingresar el id del usuario a modificar: ");
+                idUsuario = Console.ReadLine();
+                ValidacionesDatos validador = new ValidacionesDatos();
+                flag = validador.ValidarVacio(idUsuario, "ID Usuario");
+
+            } while (flag == false);
+
+            Menu menu = new Menu();
+            UsuarioModel usuario = menu.BuscarUsuario(idUsuario);
+            return usuario;
+        }
+
+        public UsuarioModel ModUsuario()
         {
             bool CtrlG = true;
             do
@@ -52,23 +71,15 @@ namespace PRESENTACION
             } while (CtrlG);
 
 
-            void cambiarContraseña()
-            {
+            void  cambiarContraseña()
+            {             
 
-                string nombre = Console.ReadLine();
+                Console.WriteLine("Ingrese la nueva constraseña");
 
-                if (usuario.nombre == nombre)
-                {
-                    Console.WriteLine("Ingrese la nueva constraseña");
-
-                    usuario.contraseña = Console.ReadLine();
-
-                    Console.WriteLine("Se guardo la nueva contraseña con exito");
-                }
-                else
-                {
-                    Console.WriteLine("No hay usuarios con ese nombre");
-                }
+                string nuevaContraseña = Console.ReadLine();
+                 
+                Console.WriteLine("Se guardo la nueva contraseña con exito");
+               
             }
 
             void cambiarEstado()
@@ -80,6 +91,8 @@ namespace PRESENTACION
             {
 
             }
+
+            UsuarioModel usuario = new UsuarioModel();
 
             return usuario;
         }
