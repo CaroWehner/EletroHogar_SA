@@ -3,6 +3,7 @@ using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,6 +37,7 @@ namespace PRESENTACION
                             Console.WriteLine("3: Baja usuario");
                             Console.WriteLine("4: Volver al menú principal");
                             string opcG = Console.ReadLine().ToUpper();
+                            UsuarioModel usuario;
                             Console.Clear();
                             switch (opcG)
                             {
@@ -59,19 +61,19 @@ namespace PRESENTACION
 
                                     if (perfil == 1)
                                     {
-                                        UsuarioModel usuario = new Administrador();
+                                        usuario = new Administrador();
                                         usuario = alta.DarAltaUsuario(perfil);
                                         usuarios.Add(usuario);
                                     }
                                     else if (perfil == 2)
                                     {
-                                        UsuarioModel usuario = new Supervisores();
+                                        usuario = new Supervisores();
                                         usuario = alta.DarAltaUsuario(perfil);
                                         usuarios.Add(usuario);
                                     }
                                     else if (perfil == 3)
                                     {
-                                        UsuarioModel usuario = new Vendedor();
+                                        usuario = new Vendedor();
                                         usuario = alta.DarAltaUsuario(perfil);
                                         usuarios.Add(usuario);
                                     }
@@ -366,14 +368,15 @@ namespace PRESENTACION
             bool flag = false;
 
             flag = ValidacionesDatos.ValidarVacio(idUsuario);
-            flag = ValidacionesDatos.ValidarID(idUsuario);
-             
-            if (flag == true)
+            //flag = ValidacionesDatos.ValidarID(idUsuario);
+
+            /*if (flag == true)
             {
                 idUsuario = Guid.NewGuid().ToString();
-            }
-            
-            return Menu.usuarios.Find(u => u.usuario == idUsuario);
+            }*/
+            //Lo pongo en comentarios ya que el ig pasa a ser un string porque ahora va a ser el siguiente: D347CE99-DB8D-4542-AA97-FC9F3CCE6969 para que funcione con el web service --CW
+
+            return Menu.usuarios.Find(u => u.id == idUsuario);
         }
 
 

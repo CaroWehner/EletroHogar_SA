@@ -12,6 +12,7 @@ namespace Presentacion
         //List<UsuarioModel> usuarios = new List<UsuarioModel>();
         UsuarioModel usuario = new UsuarioModel();
         List<UsuarioModel> usuarios = new List<UsuarioModel>();
+        private static LoginInicio loginIn = new LoginInicio();
         static void Main(string[] args)
         {
             UsuarioModel usuario = new UsuarioModel();
@@ -30,8 +31,7 @@ namespace Presentacion
             //declaro variable para definir el perfil para el menú
             int PerfilMenu = 0;
 
-            Login login = new Login();
-            string inputNombreUsuario = login.IngresarUsuario();
+            string inputNombreUsuario = loginIn.IngresarUsuario();
             //usuario = usuarios.Find(u => u.usuario == inputNombreUsuario);
             if (usuarios.Find(u => u.usuario == inputNombreUsuario) == null)
             {
@@ -45,8 +45,8 @@ namespace Presentacion
                 Console.WriteLine(mensaje);
                 PerfilMenu = usuario.host;
             }
-            string inputContraseña = Login.IngresarContraseña();
-            Login.BuscarContraseña(usuario, inputContraseña, usuario.fechacontraseña);
+            string inputContraseña = LoginInicio.IngresarContraseña();
+            LoginInicio.BuscarContraseña(usuario, inputContraseña, usuario.fechacontraseña);
 
 
             //Agrego menu según perfil del usuario

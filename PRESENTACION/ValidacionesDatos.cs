@@ -77,7 +77,7 @@ namespace PRESENTACION
             return flag;
         }
 
-        public bool ValidarID (string input)
+        /*public bool ValidarID (string input)
         {
             bool flag = true;
             if(!(input.Length == 32))
@@ -101,7 +101,7 @@ namespace PRESENTACION
 
             return flag;
         }
-
+        */
         //verifica que el ID solo tenga números y no guiones (para luego verificar que tenga 32 números en el método de arriba)
         public bool IDsolonum(string input)
         {

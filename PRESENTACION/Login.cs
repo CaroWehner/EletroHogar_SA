@@ -8,7 +8,7 @@ using Negocio;
 
 namespace PRESENTACION
 {
-    public class Login
+    public class LoginInicio
     {
         public void IntentosLogin(UsuarioModel usuario, string inputNombreUsuario)
         {
@@ -17,14 +17,14 @@ namespace PRESENTACION
             do
             {
                 IngresarUsuario();
-                /*if (UsuarioModel.usuario != inputNombreUsuario)
+                if (usuario.usuario != inputNombreUsuario)
                 {
                     Console.WriteLine("El nombre de usuario no es el mismo que ingresó anteriormente");
                     contador--;
                 }
                 IngresarContraseña();
 
-            } while (contador < 4);*/
+            } while (contador < 4);
 
             Console.WriteLine("Usted excedió la cantidad máxima de intentos y su Usuario ha pasado a estado INACTIVO");
             //buscar usuario y pasarlo a INACTIVO 
