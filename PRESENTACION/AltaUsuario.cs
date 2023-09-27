@@ -89,7 +89,13 @@ namespace PRESENTACION
                 flag = validador.ValidarVacio(NombreUsuario, "Nombre");
 
                 ValidacionesUsuario validadorUsuario = new ValidacionesUsuario();
-                flag = validadorUsuario.ValidarNombreUsuario(NombreUsuario, inputNombre, inputApellido, minCaracteresUsuario, maxCaracteresUsuario);
+                try
+                {
+                    flag = validadorUsuario.ValidarNombreUsuario(NombreUsuario, inputNombre, inputApellido, minCaracteresUsuario, maxCaracteresUsuario);
+                } catch (Exception ex) 
+                { 
+                Console.WriteLine(ex.Message)
+                }
 
             } while (flag == false);
 

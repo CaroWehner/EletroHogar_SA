@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public class UsuarioModel
+    abstract public class UsuarioModel
     {
 
         //// ATRIBUTOS

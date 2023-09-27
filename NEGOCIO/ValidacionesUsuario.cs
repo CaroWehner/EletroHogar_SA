@@ -19,17 +19,17 @@ namespace Negocio
                 // Verifica que el nombre de usuario no contenga ni el nombre ni el apellido
                 if (!nombreUsuario.Contains(nombre) && !nombreUsuario.Contains(apellido))
                 {
-                    Console.WriteLine("Nombre de usuario válido.");
+                    throw new Exception ("Nombre de usuario válido.");
                     return true;
                 }
                 else
                 {
-                    Console.WriteLine("El nombre de usuario no puede contener ni su nombre ni su apellido.");
+                    throw new Exceptionthrow new Exception("El nombre de usuario no puede contener ni su nombre ni su apellido.");
                 }
             }
             else
             {
-                Console.WriteLine("El nombre de usuario debe tener entre 8 y 15 caracteres.");
+                throw new Exception("El nombre de usuario debe tener entre 8 y 15 caracteres.");
             }
 
             return false; // La validación falló
