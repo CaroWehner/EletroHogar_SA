@@ -1,0 +1,6 @@
+C:\CAI\EletroHogar_SA\Modelo\bin\Release\Modelo.dll
+C:\CAI\EletroHogar_SA\Modelo\bin\Release\Modelo.pdb
+C:\CAI\EletroHogar_SA\Modelo\obj\Release\Modelo.csproj.AssemblyReference.cache
+C:\CAI\EletroHogar_SA\Modelo\obj\Release\Modelo.csproj.CoreCompileInputs.cache
+C:\CAI\EletroHogar_SA\Modelo\obj\Release\Modelo.dll
+C:\CAI\EletroHogar_SA\Modelo\obj\Release\Modelo.pdb

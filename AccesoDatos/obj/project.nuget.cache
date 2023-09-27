@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "THyo5CeWoQ+u2aDcJq7670NpXzo6quYSUQvB3+tU9kOtOCNkFmDnoMuZU6liT/t5DaXkaYCGpVJLD9AeUJFTTw==",
+  "dgSpecHash": "rp+21+LLTZDrXlwggZCArBDHjoV17UXw+M+GppVRhDruf3ebUazCJdmA6irxV2tLxd3gX0ToFGOoRM9YjVa3zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\carow\\Downloads\\WebService\\AccesoDatos\\AccesoDatos.csproj",
+  "projectFilePath": "C:\\CAI\\EletroHogar_SA\\AccesoDatos\\AccesoDatos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carow\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

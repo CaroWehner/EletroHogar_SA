@@ -16,25 +16,27 @@ namespace Negocio
         {
             if (nombreUsuario.Length >= min && nombreUsuario.Length <= max)
             {
-                // Verifica que el nombre de usuario no contenga ni el nombre ni el apellido
-                if (nombreUsuario.ToLower().Contains(nombre.ToLower()) || nombreUsuario.ToLower().Contains(apellido.ToLower()))
-                {
+                // Convertimos todo a minúsculas para hacer la comparación sin distinción entre mayúsculas y minúsculas
+                string nombreUsuarioLower = nombreUsuario.ToLower();
+                string nombreLower = nombre.ToLower();
+                string apellidoLower = apellido.ToLower();
+
+                // Verificamos si el nombre de usuario contiene el nombre o el apellido
+                if (nombreUsuarioLower.Contains(nombreLower) || nombreUsuarioLower.Contains(apellidoLower))
+                {                  
                     throw new Exception("El nombre de usuario no puede contener ni su nombre ni su apellido.");
                 }
                 else
                 {
-                    throw new Exception("Nombre de usuario válido.");
-                    return true;  
-                     
+                    return true; // El nombre de usuario es válido
                 }
             }
             else
             {
                 throw new Exception("El nombre de usuario debe tener entre 8 y 15 caracteres.");
             }
-
-            return false; // La validación falló
         }
+
         /* public static void ValidarexpiraciónContraseña (DateTime  FechaContraseña)
          {
              DateTime Hoy = DateTime.Today; 

@@ -31,7 +31,7 @@ namespace PRESENTACION
             return usuario;
         }
 
-        public UsuarioModel ModUsuario()
+        public UsuarioModel ModUsuario(int host)
         {
             bool CtrlG = true;
             do
@@ -92,9 +92,25 @@ namespace PRESENTACION
 
             }
 
-            UsuarioModel usuario = new UsuarioModel();
+            if(host == 1)
+            {
+                UsuarioModel usuario = new Administrador();
+                return usuario;
+            }
+            else if (host == 2)
+            {
+                UsuarioModel usuario = new Supervisores();
+                return usuario;
+            }
+            else
+            {
+                UsuarioModel usuario = new Vendedor();
+                return usuario;
+            }
 
-            return usuario;
+            
+
+            
         }
     }
 }

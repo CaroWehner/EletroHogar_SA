@@ -95,6 +95,7 @@ namespace PRESENTACION
                 } catch (Exception ex) 
                 {
                     Console.WriteLine(ex.Message);
+                    flag = false;
                 }
 
             } while (flag == false);
@@ -122,7 +123,7 @@ namespace PRESENTACION
             } while (flag == false);
             MetodosUsuarios usu = new MetodosUsuarios();
             Console.WriteLine("El usuario se dio de alta correctamente ;)");
-            return usu.CrearUsuario(inputNombre, inputApellido, inputDireccion, inputTelefono, inputEmail, fechaNacimiento, NombreUsuario, perfil, dni, inputContra);
+            return usu.CrearUsuario("99", inputNombre, inputApellido, inputDireccion, inputTelefono, inputEmail, fechaNacimiento, NombreUsuario, perfil, dni, inputContra);
         }
     }
 }

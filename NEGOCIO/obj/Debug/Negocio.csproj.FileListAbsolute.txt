@@ -31,3 +31,12 @@ D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CoreCompileIn
 D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CopyComplete
 D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.dll
 D:\Facultad\CAI\TP\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.dll
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Debug\NEGOCIO.pdb
+C:\CAI\EletroHogar_SA\NEGOCIO\bin\Debug\NEGOCIO.dll
+C:\CAI\EletroHogar_SA\NEGOCIO\bin\Debug\NEGOCIO.pdb
+C:\CAI\EletroHogar_SA\NEGOCIO\bin\Debug\Modelo.dll
+C:\CAI\EletroHogar_SA\NEGOCIO\bin\Debug\Modelo.pdb
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Debug\Negocio.csproj.CopyComplete

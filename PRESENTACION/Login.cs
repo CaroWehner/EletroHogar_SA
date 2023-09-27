@@ -69,7 +69,7 @@ namespace PRESENTACION
             if (usuarioEncontrado.contraseña != inputContraseña)
             {
                 Console.WriteLine("Contraseña invalida, ingrese nuevamente su contraseña");
-                    inputContraseña = Login.IngresarContraseña();
+                    inputContraseña = LoginInicio.IngresarContraseña();
                     contador = contador + 1; 
             }
             if (usuarioEncontrado.contraseña == inputContraseña)

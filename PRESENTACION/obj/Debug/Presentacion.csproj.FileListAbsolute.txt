@@ -49,3 +49,16 @@ D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.Cor
 D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete
 D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
 D:\Facultad\CAI\TP\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.exe
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\PRESENTACION.pdb
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe.config
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.exe
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\PRESENTACION.pdb
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.dll
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.dll
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\Modelo.pdb
+C:\CAI\EletroHogar_SA\PRESENTACION\bin\Debug\NEGOCIO.pdb
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Debug\Presentacion.csproj.CopyComplete

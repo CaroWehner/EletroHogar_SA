@@ -1,0 +1,2 @@
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Release\Negocio.csproj.AssemblyReference.cache
+C:\CAI\EletroHogar_SA\NEGOCIO\obj\Release\Negocio.csproj.CoreCompileInputs.cache

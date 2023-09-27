@@ -1,0 +1,3 @@
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Release\Presentacion.csproj.AssemblyReference.cache
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Release\Presentacion.csproj.SuggestedBindingRedirects.cache
+C:\CAI\EletroHogar_SA\PRESENTACION\obj\Release\Presentacion.csproj.CoreCompileInputs.cache

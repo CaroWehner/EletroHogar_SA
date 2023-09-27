@@ -115,7 +115,7 @@ namespace PRESENTACION
 
             return true;
         }
-        internal static bool ValidarVacio(string idUsuario)
+        internal static bool ValidarVacioid(string idUsuario)
         {
             throw new NotImplementedException();
         }

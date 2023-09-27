@@ -1,5 +1,6 @@
 ﻿using Modelo;
 using Negocio;
+using NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,19 @@ namespace PRESENTACION
     public class Menu
     {
         public static List<UsuarioModel> usuarios = new List<UsuarioModel>();
+
+
         public static void MenuAdm()
         {
+            MetodosUsuarios usu = new MetodosUsuarios();
+            UsuarioModel usuario5 = new Administrador();
+            usuario5 = usu.CrearUsuario("1", "Carolina", "Wehner", "Uzal 1234", "1138205055", "carowehner2001@gmail.com", new DateTime(2001, 05, 23), "AdministradoraCW", 1, 43245128, "CAI20232");
+            usuarios.Add(usuario5);
+            usuario5 = usu.CrearUsuario("2", "Evelyn", "Zivano", "Farrel 1234", "1153376046", "evelynzivano@gmail.com", new DateTime(1994, 07, 12), "AdministradoraEZ", 1, 38491201, "CAI20232");
+            usuarios.Add(usuario5);
+            usuario5 = usu.CrearUsuario("3", "Patricio", "Gerenni", "Cochabamba 1234", "1167845556", "patriciogerenni@gmail.com", new DateTime(1999, 04, 20), "AdministradorPG", 1, 41823861, "CAI20232");
+            usuarios.Add(usuario5);
+
             bool CtrlAdm = true;
             do
             {
@@ -85,17 +97,71 @@ namespace PRESENTACION
 
                                 case "2":
                                     //Ingresar modificación usuario                              
+                                    string id;
+                                    flag = false;
                                     ModificarUsuario mod = new ModificarUsuario();
-                                    UsuarioModel usuario1 = new UsuarioModel();
-                                    usuario1 = mod.ModUsuario();
+                                    do
+                                    {
+                                        Console.Write("Ingrese el id del usuario que quieres modificar: ");
+                                        id = Console.ReadLine();
+                                        ValidacionesDatos validador = new ValidacionesDatos();
+                                        flag = validador.ValidarVacio(id, "Id Usuario");
+                                    } while (flag == false);
+                                    Menu menu = new Menu();
+                                    UsuarioModel usuario2 = menu.BuscarUsuario(id);
+                                    if(usuario2.host == 1)
+                                    {
+                                        usuario2 = new Administrador();
+                                        usuario2 = mod.ModUsuario(usuario2.host);
+                                    }
+                                    else if(usuario2.host == 2)
+                                    {
+                                        usuario2 = new Supervisores();
+                                        usuario2 = mod.ModUsuario(usuario2.host);
+                                    }
+                                    else
+                                    {
+                                        usuario2 = new Vendedor();
+                                        usuario2 = mod.ModUsuario(usuario2.host);
+                                    }
+
                                     break;
 
                                 case "3":
                                     //Ingresar baja usuario
-                                    BajaUsuario baja = new BajaUsuario();
-                                    UsuarioModel usuario3 = new UsuarioModel();
-                                    usuario3 = baja.DarBajaUsuario();
-                                    usuario3.estado = "INACTIVO";
+                                    string idB;
+                                    flag = false;
+                                    do
+                                    {
+                                        Console.Write("Ingrese el id del usuario que quieres dar de baja: ");
+                                        id = Console.ReadLine();
+                                        ValidacionesDatos validador = new ValidacionesDatos();
+                                        flag = validador.ValidarVacio(id, "Id Usuario");
+                                    } while (flag == false);
+                                    Menu menu1 = new Menu();
+                                    UsuarioModel usuario3 = menu1.BuscarUsuario(id);
+                                    if (usuario3.host == 1)
+                                    {
+                                        BajaUsuario baja = new BajaUsuario();
+                                        UsuarioModel usuario4 = new Administrador();
+                                        usuario4 = baja.DarBajaUsuario();
+                                        usuario4.estado = "INACTIVO";
+                                    }
+                                    else if (usuario3.host == 2)
+                                    {
+                                        BajaUsuario baja = new BajaUsuario();
+                                        UsuarioModel usuario4 = new Supervisores();
+                                        usuario4 = baja.DarBajaUsuario();
+                                        usuario4.estado = "INACTIVO";
+                                    }
+                                    else
+                                    {
+                                        BajaUsuario baja = new BajaUsuario();
+                                        UsuarioModel usuario4 = new Vendedor();
+                                        usuario4 = baja.DarBajaUsuario();
+                                        usuario4.estado = "INACTIVO";
+                                    }
+                                    
                                     //pasar a INACTIVO
                                     break;
 
@@ -367,7 +433,7 @@ namespace PRESENTACION
         {
             bool flag = false;
 
-            flag = ValidacionesDatos.ValidarVacio(idUsuario);
+            //flag = ValidacionesDatos.ValidarVacioid(idUsuario);
             //flag = ValidacionesDatos.ValidarID(idUsuario);
 
             /*if (flag == true)

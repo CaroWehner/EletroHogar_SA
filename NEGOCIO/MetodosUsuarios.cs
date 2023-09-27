@@ -12,25 +12,69 @@ namespace NEGOCIO
     public class MetodosUsuarios
     {
         List<UsuarioModel> usuarios = new List<UsuarioModel>();
-        public UsuarioModel CrearUsuario(string Nombre, string Apellido, string Direccion, string telefono, string Email, DateTime FechaNacimiento, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
+        public UsuarioModel CrearUsuario(string id,string Nombre, string Apellido, string Direccion, string telefono, string Email, DateTime FechaNacimiento, string Usuario, Int32 Host, Int32 Dni, string Contraseña)
         {
-            UsuarioModel usuario = new UsuarioModel();
-            usuario.id = "D347CE99-DB8D-4542-AA97-FC9F3CCE6969";
-            usuario.nombre = Nombre;
-            usuario.apellido = Apellido;
-            usuario.direccion = Direccion;
-            usuario.telefono = telefono;
-            usuario.email = Email;
-            usuario.fechaAlta = DateTime.Now;
-            usuario.fechaNacimiento = FechaNacimiento;
-            usuario.fechaBaja = new DateTime(2999, 12, 31);
-            usuario.usuario = Usuario;
-            usuario.host = Host;
-            usuario.dni = Dni;
-            usuario.contraseña = Contraseña;
-            usuario.fechacontraseña = DateTime.Today;
+            if(Host == 1)
+            {
+                UsuarioModel usuario = new Administrador();
+                usuario.id = id;//"D347CE99-DB8D-4542-AA97-FC9F3CCE6969";
+                usuario.nombre = Nombre;
+                usuario.apellido = Apellido;
+                usuario.direccion = Direccion;
+                usuario.telefono = telefono;
+                usuario.email = Email;
+                usuario.fechaAlta = DateTime.Now;
+                usuario.fechaNacimiento = FechaNacimiento;
+                usuario.fechaBaja = new DateTime(2999, 12, 31);
+                usuario.usuario = Usuario;
+                usuario.host = Host;
+                usuario.dni = Dni;
+                usuario.contraseña = Contraseña;
+                usuario.fechacontraseña = DateTime.Today;
 
-            return usuario;
+                return usuario;
+            }
+            else if(Host == 2)
+            {
+                UsuarioModel usuario = new Supervisores();
+                usuario.id = "D347CE99-DB8D-4542-AA97-FC9F3CCE6969";
+                usuario.nombre = Nombre;
+                usuario.apellido = Apellido;
+                usuario.direccion = Direccion;
+                usuario.telefono = telefono;
+                usuario.email = Email;
+                usuario.fechaAlta = DateTime.Now;
+                usuario.fechaNacimiento = FechaNacimiento;
+                usuario.fechaBaja = new DateTime(2999, 12, 31);
+                usuario.usuario = Usuario;
+                usuario.host = Host;
+                usuario.dni = Dni;
+                usuario.contraseña = Contraseña;
+                usuario.fechacontraseña = DateTime.Today;
+
+                return usuario;
+            }
+            else
+            {
+                UsuarioModel usuario = new Vendedor();
+                usuario.id = "D347CE99-DB8D-4542-AA97-FC9F3CCE6969";
+                usuario.nombre = Nombre;
+                usuario.apellido = Apellido;
+                usuario.direccion = Direccion;
+                usuario.telefono = telefono;
+                usuario.email = Email;
+                usuario.fechaAlta = DateTime.Now;
+                usuario.fechaNacimiento = FechaNacimiento;
+                usuario.fechaBaja = new DateTime(2999, 12, 31);
+                usuario.usuario = Usuario;
+                usuario.host = Host;
+                usuario.dni = Dni;
+                usuario.contraseña = Contraseña;
+                usuario.fechacontraseña = DateTime.Today;
+
+                return usuario;
+            }
+
         }
         
 
