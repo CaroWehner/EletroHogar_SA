@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,20 +12,20 @@ namespace Negocio
 {
     public class ValidacionesUsuario
     {
-
         public bool ValidarNombreUsuario(string nombreUsuario, string nombre, string apellido, int min, int max)
         {
             if (nombreUsuario.Length >= min && nombreUsuario.Length <= max)
             {
                 // Verifica que el nombre de usuario no contenga ni el nombre ni el apellido
-                if (nombreUsuario.Contains(nombre.ToLower()) || nombreUsuario.Contains(apellido))
+                if (nombreUsuario.ToLower().Contains(nombre.ToLower()) || nombreUsuario.ToLower().Contains(apellido.ToLower()))
                 {
                     throw new Exception("El nombre de usuario no puede contener ni su nombre ni su apellido.");
                 }
                 else
                 {
                     throw new Exception("Nombre de usuario válido.");
-                    return true; 
+                    return true;  
+                     
                 }
             }
             else
