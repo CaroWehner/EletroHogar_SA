@@ -17,14 +17,14 @@ namespace Negocio
             if (nombreUsuario.Length >= min && nombreUsuario.Length <= max)
             {
                 // Verifica que el nombre de usuario no contenga ni el nombre ni el apellido
-                if (!nombreUsuario.Contains(nombre) && !nombreUsuario.Contains(apellido))
+                if (nombreUsuario.Contains(nombre.ToLower()) || nombreUsuario.Contains(apellido))
                 {
-                    throw new Exception ("Nombre de usuario válido.");
-                    return true;
+                    throw new Exception("El nombre de usuario no puede contener ni su nombre ni su apellido.");
                 }
                 else
                 {
-                    throw new Exceptionthrow new Exception("El nombre de usuario no puede contener ni su nombre ni su apellido.");
+                    throw new Exception("Nombre de usuario válido.");
+                    return true; 
                 }
             }
             else
@@ -78,7 +78,7 @@ namespace Negocio
                     //si tiene por lo menos una mayus y un número pasa a validar la cantidad de caracteres
                     if (contraseña.Length < 8 || contraseña.Length > 15)
                     {
-                        Console.WriteLine("- La contraseña debe tener entre 8 y 15 caracteres"
+                        throw new Exception("- La contraseña debe tener entre 8 y 15 caracteres"
                                           + System.Environment.NewLine + "- La contraseña debe tener como mínimo una letra mayuscula y un número"
                                           + System.Environment.NewLine + "Por favor vuelva a introducir una contraseña válida: ");
                         contraseña = Console.ReadLine();
@@ -92,7 +92,7 @@ namespace Negocio
                 else
                 {
                     //este else se dispara cuando la contra no tiene ni una mayus ni un número
-                    Console.WriteLine("- La contraseña debe tener entre 8 y 15 caracteres"
+                    throw new Exception("- La contraseña debe tener entre 8 y 15 caracteres"
                                           + System.Environment.NewLine + "- La contraseña debe tener como mínimo una letra mayuscula y un número"
                                           + System.Environment.NewLine + "Por favor vuelva a introducir una contraseña válida: ");
                     contraseña = Console.ReadLine();

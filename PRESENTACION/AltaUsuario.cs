@@ -91,10 +91,10 @@ namespace PRESENTACION
                 ValidacionesUsuario validadorUsuario = new ValidacionesUsuario();
                 try
                 {
-                    flag = validadorUsuario.ValidarNombreUsuario(NombreUsuario, inputNombre, inputApellido, minCaracteresUsuario, maxCaracteresUsuario);
+                    flag = validadorUsuario.ValidarNombreUsuario(NombreUsuario,inputNombre, inputApellido, minCaracteresUsuario, maxCaracteresUsuario);
                 } catch (Exception ex) 
-                { 
-                Console.WriteLine(ex.Message)
+                {
+                    Console.WriteLine(ex.Message);
                 }
 
             } while (flag == false);
@@ -111,9 +111,14 @@ namespace PRESENTACION
             {
                 Console.Write("Ingresar su Contraseña: ");
                 inputContra = Console.ReadLine();
-                ValidacionesUsuario.ValidarContraseña(inputContra);
-                //validacion contraseña nuevo usuario
-
+                try
+                {
+                    ValidacionesUsuario.ValidarContraseña(inputContra);
+                    //validacion contraseña nuevo usuario
+                }catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
             } while (flag == false);
             MetodosUsuarios usu = new MetodosUsuarios();
             Console.WriteLine("El usuario se dio de alta correctamente ;)");
